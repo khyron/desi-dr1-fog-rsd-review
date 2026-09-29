@@ -17,3 +17,4 @@ tools/rsd/extensions/
 *.log
 *.csv
 download-receipt.json
+review-example/
