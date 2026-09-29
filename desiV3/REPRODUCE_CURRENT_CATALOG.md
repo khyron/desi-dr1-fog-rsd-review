@@ -4,6 +4,20 @@ This guide rebuilds the twelve files currently named `desiV3_catalog_000.bin.gz`
 
 All commands below run from this repository's root. This is a Python data pipeline and does not require the visualization engine. The final copy step gives the files their deployed names. The local final manifest describes the same rows, byte sizes and encoding; a host that uses asset IDs may replace its file references after upload.
 
+## Quick path: use the included current files
+
+The actual twelve current binaries are already in [`desiV3/catalogs/`](catalogs/), with their [matching manifest](catalogs/desiV3-consolidated-manifest.json). They are regular Git files, so an authenticated clone of this private repository obtains them without downloading the upstream FITS catalogues or repeating SQL queries. From the repository root, verify the copied files:
+
+```bash
+# Linux
+sha256sum -c desiV3/catalogs/SHA256SUMS
+
+# macOS
+shasum -a 256 -c desiV3/catalogs/SHA256SUMS
+```
+
+The twelve verified files total 190,266,622 bytes. Use the rebuild procedure below when you need to audit or modify the selection, imaging joins or encoding. The manifest includes a separate host-specific nearby-position overlay reference; keep that overlay configured on any visualization host that uses it.
+
 ## Inputs, software and storage
 
 | Input | Acquisition | Why it is needed |

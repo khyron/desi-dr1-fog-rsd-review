@@ -14,6 +14,7 @@ tools/rsd/extensions/
 *.npz
 *.bin
 *.bin.gz
+!desiV3/catalogs/*.bin.gz
 *.part
 *.log
 *.csv
