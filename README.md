@@ -17,6 +17,8 @@ The visualization selection contains 15,786,217 DR1 objects (14,140,375 `GALAXY`
 
 Raw FITS, private TARGETID index arrays, reconstructed meshes, NumPy caches and correction binaries are deliberately excluded. They must be regenerated from the official sources. Relative paths below assume commands run **from the repository root** on Linux/WSL. Some historical scripts still carry original workstation path defaults; always pass explicit path arguments where shown. The two field-generation scripts in this package expose larger-memory options that were fixed in the original local run: `extend_rsd_catalog.py --max-rss-gib` and `build_lowz_bgs_field.py --cell-size-mpc-h/--iterations`. All calculated output still requires independent scientific review.
 
+**Historical vs adapted code:** [PROVENANCE.md](PROVENANCE.md) identifies every changed script and gives SHA256 hashes. The four exact originals are in `original/`; all other copied FoG/RSD Python scripts are unchanged. The command examples below use the adapted scripts so their memory and path options are available.
+
 ## Sources and download links
 
 - Full observed-target redshift catalogue: [DESI DR1 `zall-pix-iron.fits`](https://data.desi.lbl.gov/public/dr1/spectro/redux/iron/zcatalog/v1/zall-pix-iron.fits).

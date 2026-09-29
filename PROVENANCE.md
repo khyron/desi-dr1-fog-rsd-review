@@ -1,0 +1,14 @@
+# Script provenance
+
+The initial package was copied from the DESI viewer analysis workspace on 29 September 2026. The FoG calculation scripts in `tools/fog/` are byte-for-byte copies of the files used locally. The RSD calculation scripts in `tools/rsd/` are also byte-for-byte copies **except** the three variants listed below. Their exact original files are preserved in `original/`.
+
+| Script | Original SHA256 | Packaged change |
+|---|---|---|
+| `build_dr1_full_catalog.py` | `9fc08a3759695be1fbfad60a4e876943e23c9fb669642788ef0e7535ced92254` | Added `--min-reliable-z` to select the historical full catalogue explicitly |
+| `tools/rsd/extend_rsd_catalog.py` | `95b3b4551d61962637206263d5528338264cfb26ff080c9f88899da893c87b75` | Replaced the workstation-specific 5.5 GiB upper cap with a positive finite `--max-rss-gib` check; other scientific gates remain |
+| `tools/rsd/build_lowz_bgs_field.py` | `ec94ea979be10c927a10fa417680f1fea7cb58590cdd0b4e7797f76c674d6ca4` | Exposed the original fixed 16 h⁻¹ Mpc cell size and 3 iterations as CLI arguments with unchanged defaults |
+| `tools/rsd/download_validation_randoms_parallel.py` | `6a0ecb153ee36cd6138d9e18d07ff5ac8fac1d44f641d03a522cb3da0e7930a5` | Replaced the original workstation's absolute source-manifest path with this repo's `sources.json` |
+
+`compact_dr1_catalogs.py` is a new Python equivalent of the local JavaScript v3→v2 compactor; `download_sources.py` is a new general Python source downloader. They were **not** the historical programs used to generate the existing corrections. Their outputs must be checked against the historical hashes/geometry before using them to align deltas. All other copied Python files retain their original contents. `sources.json`, `requirements.txt` and `README.md` were assembled for this repository; the reports are copies of the dated local notes.
+
+For a byte-exact rerun of the historical calculation, use the appropriate script under `original/` for those four files, the original source data and software versions, and the original chunk ordering. The variants under the root and `tools/` are intended for a new controlled run, particularly on a machine with more RAM. A new run must produce new reports and pass validation; it should not be presented as the prior result.
