@@ -1,0 +1,31 @@
+{
+  "targetid": "39627715854207566",
+  "centerChunk": 0,
+  "centerObservedMpc": [
+    -818.385568988998,
+    -570.9790627765739,
+    -50.333508798867754
+  ],
+  "dimensionsMly": [
+    500.0,
+    500.0,
+    500.0
+  ],
+  "component": "both",
+  "selection": "observed-position axis-aligned box in Earth line-of-sight frame",
+  "objectsInObservedBox": 7825,
+  "correctedPositionsStillInBox": 7711,
+  "correctedPositionsOutsideBox": 114,
+  "objectsWithNonzeroFoG": 235,
+  "objectsWithNonzeroRSD": 7824,
+  "objectsWithAppliedDisplacement": 7824,
+  "absoluteAppliedDisplacementMpc": {
+    "median": 3.882370948791504,
+    "p95": 7.239307403564453,
+    "maximum": 25.60112762451172
+  },
+  "histogramData": "histograms.json",
+  "samplePlotted": 7825,
+  "sampleSeed": 42,
+  "redCross": "same TARGETID in both panels; corrected cross may move radially"
+}

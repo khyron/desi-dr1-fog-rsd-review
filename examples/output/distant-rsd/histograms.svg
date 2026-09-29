@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 1010">
+<rect width="1020" height="1010" fill="#07111c"/>
+<style>text{font-family:Arial,sans-serif;fill:#dbeafe}.sub{font-size:13px;fill:#9bb4cd}</style>
+<text x="510" y="35" text-anchor="middle" font-size="20">Radial displacement histograms · all selected objects</text>
+<text x="90" y="77" font-size="17">Signed RSD displacement</text>
+<rect x="90" y="95" width="850" height="205" fill="#0d1b2a" stroke="#456079"/>
+<rect x="90.00" y="263.22" width="20.25" height="36.78" fill="#55aaff"/>
+<rect x="111.25" y="259.13" width="20.25" height="40.87" fill="#55aaff"/>
+<rect x="132.50" y="214.99" width="20.25" height="85.01" fill="#55aaff"/>
+<rect x="153.75" y="228.07" width="20.25" height="71.93" fill="#55aaff"/>
+<rect x="175.00" y="213.35" width="20.25" height="86.65" fill="#55aaff"/>
+<rect x="196.25" y="192.10" width="20.25" height="107.90" fill="#55aaff"/>
+<rect x="217.50" y="160.22" width="20.25" height="139.78" fill="#55aaff"/>
+<rect x="238.75" y="157.77" width="20.25" height="142.23" fill="#55aaff"/>
+<rect x="260.00" y="167.58" width="20.25" height="132.42" fill="#55aaff"/>
+<rect x="281.25" y="144.69" width="20.25" height="155.31" fill="#55aaff"/>
+<rect x="302.50" y="120.17" width="20.25" height="179.83" fill="#55aaff"/>
+<rect x="323.75" y="111.17" width="20.25" height="188.83" fill="#55aaff"/>
+<rect x="345.00" y="138.97" width="20.25" height="161.03" fill="#55aaff"/>
+<rect x="366.25" y="130.79" width="20.25" height="169.21" fill="#55aaff"/>
+<rect x="387.50" y="114.44" width="20.25" height="185.56" fill="#55aaff"/>
+<rect x="408.75" y="140.60" width="20.25" height="159.40" fill="#55aaff"/>
+<rect x="430.00" y="127.52" width="20.25" height="172.48" fill="#55aaff"/>
+<rect x="451.25" y="138.97" width="20.25" height="161.03" fill="#55aaff"/>
+<rect x="472.50" y="115.26" width="20.25" height="184.74" fill="#55aaff"/>
+<rect x="493.75" y="103.00" width="20.25" height="197.00" fill="#55aaff"/>
+<rect x="515.00" y="162.67" width="20.25" height="137.33" fill="#55aaff"/>
+<rect x="536.25" y="197.00" width="20.25" height="103.00" fill="#55aaff"/>
+<rect x="557.50" y="213.35" width="20.25" height="86.65" fill="#55aaff"/>
+<rect x="578.75" y="215.80" width="20.25" height="84.20" fill="#55aaff"/>
+<rect x="600.00" y="242.78" width="20.25" height="57.22" fill="#55aaff"/>
+<rect x="621.25" y="235.42" width="20.25" height="64.58" fill="#55aaff"/>
+<rect x="642.50" y="254.22" width="20.25" height="45.78" fill="#55aaff"/>
+<rect x="663.75" y="244.41" width="20.25" height="55.59" fill="#55aaff"/>
+<rect x="685.00" y="241.96" width="20.25" height="58.04" fill="#55aaff"/>
+<rect x="706.25" y="258.31" width="20.25" height="41.69" fill="#55aaff"/>
+<rect x="727.50" y="263.22" width="20.25" height="36.78" fill="#55aaff"/>
+<rect x="748.75" y="274.66" width="20.25" height="25.34" fill="#55aaff"/>
+<rect x="770.00" y="286.10" width="20.25" height="13.90" fill="#55aaff"/>
+<rect x="791.25" y="299.18" width="20.25" height="0.82" fill="#55aaff"/>
+<rect x="812.50" y="300.00" width="20.25" height="0.00" fill="#55aaff"/>
+<rect x="833.75" y="300.00" width="20.25" height="0.00" fill="#55aaff"/>
+<rect x="855.00" y="300.00" width="20.25" height="0.00" fill="#55aaff"/>
+<rect x="876.25" y="300.00" width="20.25" height="0.00" fill="#55aaff"/>
+<rect x="897.50" y="300.00" width="20.25" height="0.00" fill="#55aaff"/>
+<rect x="918.75" y="300.00" width="20.25" height="0.00" fill="#55aaff"/>
+<text x="90" y="323" class="sub">-9.63 Mpc</text>
+<text x="940" y="323" text-anchor="end" class="sub">9.63 Mpc</text>
+<text x="515.0" y="323" text-anchor="middle" class="sub">nonzero values · p99 display range · 45 outliers outside</text>
+<text x="90" y="382" font-size="17">Absolute RSD displacement</text>
+<rect x="90" y="400" width="850" height="205" fill="#0d1b2a" stroke="#456079"/>
+<rect x="90.00" y="408.00" width="20.25" height="197.00" fill="#f07a52"/>
+<rect x="111.25" y="408.96" width="20.25" height="196.04" fill="#f07a52"/>
+<rect x="132.50" y="416.65" width="20.25" height="188.35" fill="#f07a52"/>
+<rect x="153.75" y="455.09" width="20.25" height="149.91" fill="#f07a52"/>
+<rect x="175.00" y="455.09" width="20.25" height="149.91" fill="#f07a52"/>
+<rect x="196.25" y="463.74" width="20.25" height="141.26" fill="#f07a52"/>
+<rect x="217.50" y="457.01" width="20.25" height="147.99" fill="#f07a52"/>
+<rect x="238.75" y="451.24" width="20.25" height="153.76" fill="#f07a52"/>
+<rect x="260.00" y="469.50" width="20.25" height="135.50" fill="#f07a52"/>
+<rect x="281.25" y="485.84" width="20.25" height="119.16" fill="#f07a52"/>
+<rect x="302.50" y="459.89" width="20.25" height="145.11" fill="#f07a52"/>
+<rect x="323.75" y="456.05" width="20.25" height="148.95" fill="#f07a52"/>
+<rect x="345.00" y="475.27" width="20.25" height="129.73" fill="#f07a52"/>
+<rect x="366.25" y="482.00" width="20.25" height="123.00" fill="#f07a52"/>
+<rect x="387.50" y="488.72" width="20.25" height="116.28" fill="#f07a52"/>
+<rect x="408.75" y="466.62" width="20.25" height="138.38" fill="#f07a52"/>
+<rect x="430.00" y="457.01" width="20.25" height="147.99" fill="#f07a52"/>
+<rect x="451.25" y="462.78" width="20.25" height="142.22" fill="#f07a52"/>
+<rect x="472.50" y="469.50" width="20.25" height="135.50" fill="#f07a52"/>
+<rect x="493.75" y="480.07" width="20.25" height="124.93" fill="#f07a52"/>
+<rect x="515.00" y="492.57" width="20.25" height="112.43" fill="#f07a52"/>
+<rect x="536.25" y="491.60" width="20.25" height="113.40" fill="#f07a52"/>
+<rect x="557.50" y="521.40" width="20.25" height="83.60" fill="#f07a52"/>
+<rect x="578.75" y="503.14" width="20.25" height="101.86" fill="#f07a52"/>
+<rect x="600.00" y="502.18" width="20.25" height="102.82" fill="#f07a52"/>
+<rect x="621.25" y="524.28" width="20.25" height="80.72" fill="#f07a52"/>
+<rect x="642.50" y="524.28" width="20.25" height="80.72" fill="#f07a52"/>
+<rect x="663.75" y="520.43" width="20.25" height="84.57" fill="#f07a52"/>
+<rect x="685.00" y="542.54" width="20.25" height="62.46" fill="#f07a52"/>
+<rect x="706.25" y="540.61" width="20.25" height="64.39" fill="#f07a52"/>
+<rect x="727.50" y="545.42" width="20.25" height="59.58" fill="#f07a52"/>
+<rect x="748.75" y="562.72" width="20.25" height="42.28" fill="#f07a52"/>
+<rect x="770.00" y="567.52" width="20.25" height="37.48" fill="#f07a52"/>
+<rect x="791.25" y="557.91" width="20.25" height="47.09" fill="#f07a52"/>
+<rect x="812.50" y="552.15" width="20.25" height="52.85" fill="#f07a52"/>
+<rect x="833.75" y="557.91" width="20.25" height="47.09" fill="#f07a52"/>
+<rect x="855.00" y="580.01" width="20.25" height="24.99" fill="#f07a52"/>
+<rect x="876.25" y="581.94" width="20.25" height="23.06" fill="#f07a52"/>
+<rect x="897.50" y="582.90" width="20.25" height="22.10" fill="#f07a52"/>
+<rect x="918.75" y="583.86" width="20.25" height="21.14" fill="#f07a52"/>
+<text x="90" y="628" class="sub">0.00 Mpc</text>
+<text x="940" y="628" text-anchor="end" class="sub">9.63 Mpc</text>
+<text x="515.0" y="628" text-anchor="middle" class="sub">nonzero values · p99 display range · 45 outliers outside</text>
+<text x="90" y="687" font-size="17">Absolute applied displacement (rsd)</text>
+<rect x="90" y="705" width="850" height="205" fill="#0d1b2a" stroke="#456079"/>
+<rect x="90.00" y="713.00" width="20.25" height="197.00" fill="#b993ff"/>
+<rect x="111.25" y="713.96" width="20.25" height="196.04" fill="#b993ff"/>
+<rect x="132.50" y="721.65" width="20.25" height="188.35" fill="#b993ff"/>
+<rect x="153.75" y="760.09" width="20.25" height="149.91" fill="#b993ff"/>
+<rect x="175.00" y="760.09" width="20.25" height="149.91" fill="#b993ff"/>
+<rect x="196.25" y="768.74" width="20.25" height="141.26" fill="#b993ff"/>
+<rect x="217.50" y="762.01" width="20.25" height="147.99" fill="#b993ff"/>
+<rect x="238.75" y="756.24" width="20.25" height="153.76" fill="#b993ff"/>
+<rect x="260.00" y="774.50" width="20.25" height="135.50" fill="#b993ff"/>
+<rect x="281.25" y="790.84" width="20.25" height="119.16" fill="#b993ff"/>
+<rect x="302.50" y="764.89" width="20.25" height="145.11" fill="#b993ff"/>
+<rect x="323.75" y="761.05" width="20.25" height="148.95" fill="#b993ff"/>
+<rect x="345.00" y="780.27" width="20.25" height="129.73" fill="#b993ff"/>
+<rect x="366.25" y="787.00" width="20.25" height="123.00" fill="#b993ff"/>
+<rect x="387.50" y="793.72" width="20.25" height="116.28" fill="#b993ff"/>
+<rect x="408.75" y="771.62" width="20.25" height="138.38" fill="#b993ff"/>
+<rect x="430.00" y="762.01" width="20.25" height="147.99" fill="#b993ff"/>
+<rect x="451.25" y="767.78" width="20.25" height="142.22" fill="#b993ff"/>
+<rect x="472.50" y="774.50" width="20.25" height="135.50" fill="#b993ff"/>
+<rect x="493.75" y="785.07" width="20.25" height="124.93" fill="#b993ff"/>
+<rect x="515.00" y="797.57" width="20.25" height="112.43" fill="#b993ff"/>
+<rect x="536.25" y="796.60" width="20.25" height="113.40" fill="#b993ff"/>
+<rect x="557.50" y="826.40" width="20.25" height="83.60" fill="#b993ff"/>
+<rect x="578.75" y="808.14" width="20.25" height="101.86" fill="#b993ff"/>
+<rect x="600.00" y="807.18" width="20.25" height="102.82" fill="#b993ff"/>
+<rect x="621.25" y="829.28" width="20.25" height="80.72" fill="#b993ff"/>
+<rect x="642.50" y="829.28" width="20.25" height="80.72" fill="#b993ff"/>
+<rect x="663.75" y="825.43" width="20.25" height="84.57" fill="#b993ff"/>
+<rect x="685.00" y="847.54" width="20.25" height="62.46" fill="#b993ff"/>
+<rect x="706.25" y="845.61" width="20.25" height="64.39" fill="#b993ff"/>
+<rect x="727.50" y="850.42" width="20.25" height="59.58" fill="#b993ff"/>
+<rect x="748.75" y="867.72" width="20.25" height="42.28" fill="#b993ff"/>
+<rect x="770.00" y="872.52" width="20.25" height="37.48" fill="#b993ff"/>
+<rect x="791.25" y="862.91" width="20.25" height="47.09" fill="#b993ff"/>
+<rect x="812.50" y="857.15" width="20.25" height="52.85" fill="#b993ff"/>
+<rect x="833.75" y="862.91" width="20.25" height="47.09" fill="#b993ff"/>
+<rect x="855.00" y="885.01" width="20.25" height="24.99" fill="#b993ff"/>
+<rect x="876.25" y="886.94" width="20.25" height="23.06" fill="#b993ff"/>
+<rect x="897.50" y="887.90" width="20.25" height="22.10" fill="#b993ff"/>
+<rect x="918.75" y="888.86" width="20.25" height="21.14" fill="#b993ff"/>
+<text x="90" y="933" class="sub">0.00 Mpc</text>
+<text x="940" y="933" text-anchor="end" class="sub">9.63 Mpc</text>
+<text x="515.0" y="933" text-anchor="middle" class="sub">nonzero values · p99 display range · 45 outliers outside</text>
+</svg>
