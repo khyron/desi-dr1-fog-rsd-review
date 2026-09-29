@@ -3,6 +3,7 @@ __pycache__/
 .venv/
 data/
 data_external/
+desiV3/data/
 assets/
 ply/
 tools/rsd/lowz_sources/

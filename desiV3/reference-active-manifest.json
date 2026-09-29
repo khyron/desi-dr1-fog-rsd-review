@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "count": 15786217,
+  "zMax": 6.8573689460754395,
+  "unitsPerMpc": 3.7549537973846068,
+  "partition": "position-hash-v1",
+  "tracers": [
+    "DR1_GALAXY",
+    "DR1_QSO"
+  ],
+  "tracerCounts": {
+    "DR1_GALAXY": 14140375,
+    "DR1_QSO": 1645842
+  },
+  "chunks": [
+    {
+      "file": "catalog_000.bin.gz",
+      "count": 1320208,
+      "bytes": 15898739
+    },
+    {
+      "file": "catalog_001.bin.gz",
+      "count": 1316010,
+      "bytes": 15866787
+    },
+    {
+      "file": "catalog_002.bin.gz",
+      "count": 1312242,
+      "bytes": 15823990
+    },
+    {
+      "file": "catalog_003.bin.gz",
+      "count": 1317201,
+      "bytes": 15869728
+    },
+    {
+      "file": "catalog_004.bin.gz",
+      "count": 1313621,
+      "bytes": 15836503
+    },
+    {
+      "file": "catalog_005.bin.gz",
+      "count": 1318199,
+      "bytes": 15875889
+    },
+    {
+      "file": "catalog_006.bin.gz",
+      "count": 1314505,
+      "bytes": 15849042
+    },
+    {
+      "file": "catalog_007.bin.gz",
+      "count": 1314791,
+      "bytes": 15852619
+    },
+    {
+      "file": "catalog_008.bin.gz",
+      "count": 1314512,
+      "bytes": 15852776
+    },
+    {
+      "file": "catalog_009.bin.gz",
+      "count": 1312891,
+      "bytes": 15824833
+    },
+    {
+      "file": "catalog_010.bin.gz",
+      "count": 1318254,
+      "bytes": 15871434
+    },
+    {
+      "file": "catalog_011.bin.gz",
+      "count": 1313783,
+      "bytes": 15844282
+    }
+  ],
+  "typeEncoding": "dr1-target-bits-v1",
+  "targetCounts": {
+    "BGS": 6759287,
+    "BGS_BRIGHT": 4695540,
+    "LRG": 3127096,
+    "ELG": 4954098,
+    "QSO_TARGET": 1954570,
+    "OTHER": 423346
+  },
+  "encoding": "desi-consolidated-1",
+  "catalogs": [
+    {
+      "name": "DR1_GALAXY.desi",
+      "count": 14140375,
+      "unitsPerMpc": 6.78622579574585,
+      "zMin": 1.4432123274232822e-09,
+      "zMax": 1.6978827714920044,
+      "headerHex": "4445534902000000d7c3d700c328d940855ac6303954d93fa8e396c5a50996c5dd231bc502e19645fc58904505229645"
+    },
+    {
+      "name": "DR1_QSO.desi",
+      "count": 1645842,
+      "unitsPerMpc": 3.8300528526306152,
+      "zMin": 0.05122996121644974,
+      "zMax": 6.8573689460754395,
+      "headerHex": "4445534902000000121d1900961f754082d6513d916fdb40f0ac05c662bbfdc57c594ec5bfe70446f54bf745b78a0346"
+    }
+  ],
+  "localPrecision": {
+    "file": "https://www.tinyplanet.cl/desi/desi-chunks/precision_near_50mpc.bin",
+    "bytes": 746690,
+    "count": 43922,
+    "radiusMpc": 50.0,
+    "unitsPerMpc": 3.7549537973846068,
+    "encoding": "dr1-near-precision-v1"
+  }
+}

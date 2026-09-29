@@ -1,0 +1,110 @@
+{
+ "version": 3,
+ "count": 15786217,
+ "zMax": 6.8573689460754395,
+ "unitsPerMpc": 3.7549537973846068,
+ "partition": "position-hash-v1",
+ "tracers": [
+  "DR1_GALAXY",
+  "DR1_QSO"
+ ],
+ "tracerCounts": {
+  "DR1_GALAXY": 14140375,
+  "DR1_QSO": 1645842
+ },
+ "chunks": [
+  {
+   "file": "chunk_000_dr1v2.bin",
+   "count": 1320208,
+   "bytes": 5500781,
+   "type": "type_000_dr1v2.bin",
+   "typeBytes": 370289
+  },
+  {
+   "file": "chunk_001_dr1v2.bin",
+   "count": 1316010,
+   "bytes": 5498373,
+   "type": "type_001_dr1v2.bin",
+   "typeBytes": 369181
+  },
+  {
+   "file": "chunk_002_dr1v2.bin",
+   "count": 1312242,
+   "bytes": 5484979,
+   "type": "type_002_dr1v2.bin",
+   "typeBytes": 368552
+  },
+  {
+   "file": "chunk_003_dr1v2.bin",
+   "count": 1317201,
+   "bytes": 5497304,
+   "type": "type_003_dr1v2.bin",
+   "typeBytes": 368890
+  },
+  {
+   "file": "chunk_004_dr1v2.bin",
+   "count": 1313621,
+   "bytes": 5484960,
+   "type": "type_004_dr1v2.bin",
+   "typeBytes": 368525
+  },
+  {
+   "file": "chunk_005_dr1v2.bin",
+   "count": 1318199,
+   "bytes": 5497157,
+   "type": "type_005_dr1v2.bin",
+   "typeBytes": 369817
+  },
+  {
+   "file": "chunk_006_dr1v2.bin",
+   "count": 1314505,
+   "bytes": 5490536,
+   "type": "type_006_dr1v2.bin",
+   "typeBytes": 368978
+  },
+  {
+   "file": "chunk_007_dr1v2.bin",
+   "count": 1314791,
+   "bytes": 5492525,
+   "type": "type_007_dr1v2.bin",
+   "typeBytes": 369157
+  },
+  {
+   "file": "chunk_008_dr1v2.bin",
+   "count": 1314512,
+   "bytes": 5493448,
+   "type": "type_008_dr1v2.bin",
+   "typeBytes": 369113
+  },
+  {
+   "file": "chunk_009_dr1v2.bin",
+   "count": 1312891,
+   "bytes": 5485145,
+   "type": "type_009_dr1v2.bin",
+   "typeBytes": 368189
+  },
+  {
+   "file": "chunk_010_dr1v2.bin",
+   "count": 1318254,
+   "bytes": 5494246,
+   "type": "type_010_dr1v2.bin",
+   "typeBytes": 370328
+  },
+  {
+   "file": "chunk_011_dr1v2.bin",
+   "count": 1313783,
+   "bytes": 5487681,
+   "type": "type_011_dr1v2.bin",
+   "typeBytes": 368993
+  }
+ ],
+ "typeEncoding": "dr1-target-bits-v1",
+ "targetCounts": {
+  "BGS": 6759287,
+  "BGS_BRIGHT": 4695540,
+  "LRG": 3127096,
+  "ELG": 4954098,
+  "QSO_TARGET": 1954570,
+  "OTHER": 423346
+ }
+}

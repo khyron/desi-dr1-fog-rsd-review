@@ -26,6 +26,10 @@ python visualize_target_region.py 39627625127219783 \
 
 [Comparison](output/nearby-rsd/comparison.svg) · [Histograms](output/nearby-rsd/histograms.svg) · [Summary](output/nearby-rsd/summary.json)
 
+![Nearby low-redshift observed and RSD-corrected positions](output/nearby-rsd/comparison.svg)
+
+![Nearby low-redshift displacement histograms](output/nearby-rsd/histograms.svg)
+
 ## 2. Midrange FoG and RSD together
 
 This 500 Mly cube contains 7,825 observed objects. It has 7,824 nonzero RSD values and 235 nonzero FoG values. The median absolute applied displacement is 3.88 Mpc; 114 corrected objects leave the box.
@@ -40,6 +44,10 @@ python visualize_target_region.py 39627715854207566 \
 ```
 
 [Comparison](output/midrange-both/comparison.svg) · [Histograms](output/midrange-both/histograms.svg) · [Summary](output/midrange-both/summary.json)
+
+![Midrange observed and combined FoG/RSD-corrected positions](output/midrange-both/comparison.svg)
+
+![Midrange combined-correction displacement histograms](output/midrange-both/histograms.svg)
 
 ## 3. Same volume with FoG only
 
@@ -56,6 +64,10 @@ python visualize_target_region.py 39627715854207566 \
 
 [Comparison](output/midrange-fog/comparison.svg) · [Histograms](output/midrange-fog/histograms.svg) · [Summary](output/midrange-fog/summary.json)
 
+![Midrange observed and FoG-only corrected positions](output/midrange-fog/comparison.svg)
+
+![Midrange FoG-only displacement histograms](output/midrange-fog/histograms.svg)
+
 ## 4. Distant RSD region
 
 The center is about 3,066 Mpc from Earth. This larger box holds 4,412 observed objects, 4,411 with a nonzero RSD delta. The median absolute RSD displacement is 3.36 Mpc; 126 corrected objects leave the box.
@@ -70,5 +82,9 @@ python visualize_target_region.py 39627721612989316 \
 ```
 
 [Comparison](output/distant-rsd/comparison.svg) · [Histograms](output/distant-rsd/histograms.svg) · [Summary](output/distant-rsd/summary.json)
+
+![Distant observed and RSD-corrected positions](output/distant-rsd/comparison.svg)
+
+![Distant displacement histograms](output/distant-rsd/histograms.svg)
 
 For a new area, replace TARGETID and the three Mly dimensions, and choose `--component rsd`, `fog` or `both`. Increase `--max-points` only if the SVG remains manageable. Keep the point geometry, exact TARGETID index and correction payloads from the same catalogue run; mismatched row order would create a misleading comparison.

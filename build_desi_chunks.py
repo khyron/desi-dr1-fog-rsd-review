@@ -81,6 +81,8 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--chunks', type=int, default=12, help='number of chunks (default: 12)')
     ap.add_argument('--out', default=str(OUT_DIR))
+    ap.add_argument('--assets-dir', type=Path, default=ASSETS,
+                    help='directory containing v3 .desi files and targeting flags')
     ap.add_argument('--tag', default='',
                     help='version suffix for cache invalidation, e.g. 20260819')
     ap.add_argument('--fog-index-dir', default='',
@@ -91,7 +93,8 @@ def main():
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    dr1_present = [(ASSETS / f'{name}.desi').exists() for name in DR1_TRACERS]
+    assets = args.assets_dir
+    dr1_present = [(assets / f'{name}.desi').exists() for name in DR1_TRACERS]
     if any(dr1_present) and not all(dr1_present):
         raise FileNotFoundError('DR1 requires both DR1_GALAXY.desi and DR1_QSO.desi')
     tracers = DR1_TRACERS if all(dr1_present) else LEGACY_TRACERS
@@ -102,7 +105,7 @@ def main():
     parts, types, target_parts, flag_parts = [], [], [], []
     max_redshift = 0.0
     for tracer in tracers:
-        src = ASSETS / f'{tracer}.desi'
+        src = assets / f'{tracer}.desi'
         if not src.exists():
             print(f'  [skip]  missing {src.name}')
             continue
@@ -113,7 +116,7 @@ def main():
         types.append(np.full(len(mpc), tracer_codes[tracer], dtype=np.uint8))
         target_parts.append(target_id)
         if tracers == DR1_TRACERS:
-            flags_path = ASSETS / f'{tracer}.target-flags.bin'
+            flags_path = assets / f'{tracer}.target-flags.bin'
             if not flags_path.exists() or flags_path.stat().st_size != len(mpc):
                 raise ValueError(f'{flags_path.name}: missing or wrong row count')
             flag_parts.append(np.memmap(flags_path, dtype='u1', mode='r'))
