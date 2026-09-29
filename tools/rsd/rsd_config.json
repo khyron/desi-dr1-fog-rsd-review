@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "catalog": "DESI DR1 LSS iron LSScats v1.5",
+  "cosmology": {
+    "name": "Planck18 (viewer geometry)",
+    "distanceUnits": "Mpc",
+    "reconstructionInput": "viewer-compatible Planck18 comoving Mpc",
+    "publishedParameters": "bias, f and smoothing are retained; h^-1 Mpc values convert explicitly before production"
+  },
+  "gridCellSizeMpcH": 16.0,
+  "batchSize": 250000,
+  "tracers": {
+    "BGS": {"zMin": 0.1, "zMax": 0.4, "bias": 1.5, "f": 0.682, "smoothingMpcH": 15.0},
+    "LRG": {"zMin": 0.4, "zMax": 0.8, "bias": 2.0, "f": 0.834, "smoothingMpcH": 15.0},
+    "LRG_ELG": {"zMin": 0.8, "zMax": 1.1, "bias": 1.6, "f": 0.87, "smoothingMpcH": 15.0},
+    "ELG": {"zMin": 1.1, "zMax": 1.6, "bias": 1.2, "f": 0.9, "smoothingMpcH": 15.0},
+    "QSO": {"zMin": 1.6, "zMax": 2.1, "bias": 2.1, "f": 0.928, "smoothingMpcH": 30.0}
+  }
+}

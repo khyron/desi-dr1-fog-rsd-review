@@ -1,0 +1,290 @@
+{
+  "files": [
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/spectro/redux/iron/zcatalog/v1/zall-pix-iron.fits",
+      "group": "dr1_zcatalog",
+      "file": "zall-pix-iron.fits"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/vac/dr1/gfinder/v1.0/dr1_vac_dr1_gfinder_v1.0.sha256sum",
+      "group": "fog_gfinder",
+      "file": "dr1_vac_dr1_gfinder_v1.0.sha256sum"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/vac/dr1/gfinder/v1.0/DESIDR9.y1.v1_galaxy.fits",
+      "group": "fog_gfinder",
+      "file": "DESIDR9.y1.v1_galaxy.fits"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/vac/dr1/gfinder/v1.0/DESIDR9.y1.v1_group.fits",
+      "group": "fog_gfinder",
+      "file": "DESIDR9.y1.v1_group.fits"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/vac/dr1/gfinder/v1.0/iDESIDR9.y1.v1_1.fits",
+      "group": "fog_gfinder",
+      "file": "iDESIDR9.y1.v1_1.fits"
+    },
+    {
+      "kind": "random",
+      "region": "NGC",
+      "tracer": "BGS",
+      "file": "BGS_BRIGHT-21.5_NGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT-21.5_NGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "NGC",
+      "tracer": "BGS",
+      "file": "BGS_BRIGHT-21.5_NGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT-21.5_NGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "random",
+      "region": "SGC",
+      "tracer": "BGS",
+      "file": "BGS_BRIGHT-21.5_SGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT-21.5_SGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "SGC",
+      "tracer": "BGS",
+      "file": "BGS_BRIGHT-21.5_SGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT-21.5_SGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "random",
+      "region": "NGC",
+      "tracer": "ELG",
+      "file": "ELG_LOPnotqso_NGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/ELG_LOPnotqso_NGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "NGC",
+      "tracer": "ELG",
+      "file": "ELG_LOPnotqso_NGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/ELG_LOPnotqso_NGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "random",
+      "region": "SGC",
+      "tracer": "ELG",
+      "file": "ELG_LOPnotqso_SGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/ELG_LOPnotqso_SGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "SGC",
+      "tracer": "ELG",
+      "file": "ELG_LOPnotqso_SGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/ELG_LOPnotqso_SGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "random",
+      "region": "NGC",
+      "tracer": "LRG_ELG",
+      "file": "LRG+ELG_LOPnotqso_NGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG+ELG_LOPnotqso_NGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "NGC",
+      "tracer": "LRG_ELG",
+      "file": "LRG+ELG_LOPnotqso_NGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG+ELG_LOPnotqso_NGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "random",
+      "region": "SGC",
+      "tracer": "LRG_ELG",
+      "file": "LRG+ELG_LOPnotqso_SGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG+ELG_LOPnotqso_SGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "SGC",
+      "tracer": "LRG_ELG",
+      "file": "LRG+ELG_LOPnotqso_SGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG+ELG_LOPnotqso_SGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "random",
+      "region": "NGC",
+      "tracer": "LRG",
+      "file": "LRG_NGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "NGC",
+      "tracer": "LRG",
+      "file": "LRG_NGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "random",
+      "region": "SGC",
+      "tracer": "LRG",
+      "file": "LRG_SGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "SGC",
+      "tracer": "LRG",
+      "file": "LRG_SGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "random",
+      "region": "NGC",
+      "tracer": "QSO",
+      "file": "QSO_NGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/QSO_NGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "NGC",
+      "tracer": "QSO",
+      "file": "QSO_NGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/QSO_NGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "random",
+      "region": "SGC",
+      "tracer": "QSO",
+      "file": "QSO_SGC_0_clustering.ran.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/QSO_SGC_0_clustering.ran.fits",
+      "group": "rsd_base"
+    },
+    {
+      "kind": "data",
+      "region": "SGC",
+      "tracer": "QSO",
+      "file": "QSO_SGC_clustering.dat.fits",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/QSO_SGC_clustering.dat.fits",
+      "group": "rsd_base"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_clustering.dat.fits",
+      "group": "bgs_lowz",
+      "file": "BGS_BRIGHT_NGC_clustering.dat.fits"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_clustering.dat.fits",
+      "group": "bgs_lowz",
+      "file": "BGS_BRIGHT_SGC_clustering.dat.fits"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_0_clustering.ran.fits",
+      "group": "bgs_lowz",
+      "file": "BGS_BRIGHT_NGC_0_clustering.ran.fits"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_0_clustering.ran.fits",
+      "group": "bgs_lowz",
+      "file": "BGS_BRIGHT_SGC_0_clustering.ran.fits"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_1_clustering.ran.fits",
+      "group": "bgs_lowz",
+      "file": "BGS_BRIGHT_NGC_1_clustering.ran.fits"
+    },
+    {
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_1_clustering.ran.fits",
+      "group": "bgs_lowz",
+      "file": "BGS_BRIGHT_SGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "NGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT-21.5_NGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "BGS",
+      "file": "BGS_BRIGHT-21.5_NGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "SGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT-21.5_SGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "BGS",
+      "file": "BGS_BRIGHT-21.5_SGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "NGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/ELG_LOPnotqso_NGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "ELG",
+      "file": "ELG_LOPnotqso_NGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "SGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/ELG_LOPnotqso_SGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "ELG",
+      "file": "ELG_LOPnotqso_SGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "NGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG+ELG_LOPnotqso_NGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "LRG_ELG",
+      "file": "LRG+ELG_LOPnotqso_NGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "SGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG+ELG_LOPnotqso_SGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "LRG_ELG",
+      "file": "LRG+ELG_LOPnotqso_SGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "NGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "LRG",
+      "file": "LRG_NGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "SGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "LRG",
+      "file": "LRG_SGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "NGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/QSO_NGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "QSO",
+      "file": "QSO_NGC_1_clustering.ran.fits"
+    },
+    {
+      "region": "SGC",
+      "url": "https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/QSO_SGC_1_clustering.ran.fits",
+      "group": "rsd_validation_index1",
+      "tracer": "QSO",
+      "file": "QSO_SGC_1_clustering.ran.fits"
+    }
+  ],
+  "generatedFrom": "recorded local source manifests and official DESI paths"
+}

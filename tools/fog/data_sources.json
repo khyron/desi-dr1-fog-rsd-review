@@ -1,0 +1,24 @@
+{
+  "dataset": "DESI DR1 Gfinder Halo-based Group Catalog",
+  "version": "v1.0",
+  "host": "data.desi.lbl.gov",
+  "basePath": "/public/dr1/vac/dr1/gfinder/v1.0",
+  "checksumFile": "dr1_vac_dr1_gfinder_v1.0.sha256sum",
+  "files": [
+    {
+      "name": "DESIDR9.y1.v1_galaxy.fits",
+      "approximateBytes": 8353368000,
+      "requiredColumns": ["IGAL", "RA", "DEC", "Z", "ZERR", "ZSRC", "RELEASE", "BRICKID", "OBJID"]
+    },
+    {
+      "name": "DESIDR9.y1.v1_group.fits",
+      "approximateBytes": 5577586560,
+      "requiredColumns": ["IGRP", "RICH", "GRP_RA", "GRP_DEC", "GRP_Z", "GRP_LOGM", "GRP_LOGL"]
+    },
+    {
+      "name": "iDESIDR9.y1.v1_1.fits",
+      "approximateBytes": 3233566080,
+      "requiredColumns": ["IGAL", "IGRP", "RANK"]
+    }
+  ]
+}
