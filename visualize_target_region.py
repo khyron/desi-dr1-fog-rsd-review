@@ -5,6 +5,8 @@ from __future__ import annotations
 import argparse
 import gzip
 import json
+import io
+import struct
 from html import escape
 from pathlib import Path
 
@@ -13,13 +15,37 @@ import numpy as np
 MPC_TO_MLY = 3.261563777
 
 
-def read_chunk(path: Path, count: int, units_per_mpc: float) -> np.ndarray:
+def read_chunk(path: Path, count: int, scales: tuple[float, float]) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     raw = gzip.decompress(path.read_bytes())
-    delta = np.frombuffer(raw, dtype="<i2")
-    if delta.size != 3 * count:
-        raise ValueError(f"{path}: expected {3 * count} coordinate deltas, got {delta.size}")
-    axes = delta.reshape(3, count).astype(np.int64)
-    return np.cumsum(axes, axis=1, dtype=np.int64).T / units_per_mpc
+    if len(raw) < 64 or raw[:4] != b"DSC3":
+        raise ValueError(f"{path}: invalid V3 header")
+    version, n, type_off, row_off, pos_off, z_off, attr_off, end = struct.unpack_from("<8I", raw, 4)
+    if version != 1 or n != count or end != len(raw) or not (64 <= type_off < row_off < pos_off < z_off < attr_off < end):
+        raise ValueError(f"{path}: invalid V3 offsets or count")
+    types = np.frombuffer(raw, dtype="u1", count=n, offset=type_off)
+    rows = np.frombuffer(raw, dtype="<u4", count=n, offset=row_off)
+    axes = np.frombuffer(raw, dtype="<i2", count=3*n, offset=pos_off).reshape(3, n).astype(np.int64)
+    native = np.cumsum(axes, axis=1, dtype=np.int64).T
+    scale = np.where((types & 64) != 0, scales[1], scales[0])
+    return native / scale[:, None], types, rows
+
+
+def read_ids(path: Path, count: int) -> np.ndarray:
+    with gzip.open(path, "rb") as stream:
+        ids = np.load(io.BytesIO(stream.read()), allow_pickle=False)
+    if ids.dtype != np.dtype("<u8") or len(ids) != count:
+        raise ValueError(f"{path}: invalid TARGETID index")
+    return ids
+
+
+def selected_ids(types: np.ndarray, rows: np.ndarray, galaxy: np.ndarray, qso: np.ndarray) -> np.ndarray:
+    q = (types & 64) != 0
+    if (np.any(rows[~q] >= len(galaxy)) or np.any(rows[q] >= len(qso))):
+        raise ValueError("V3 original-row index out of bounds")
+    ids = np.empty(len(rows), dtype=np.uint64)
+    ids[~q] = galaxy[rows[~q]]
+    ids[q] = qso[rows[q]]
+    return ids
 
 
 def read_correction(path: Path, count: int) -> np.ndarray:
@@ -150,13 +176,13 @@ def write_histograms(path: Path, rsd: np.ndarray, fog: np.ndarray, component: st
 
 
 def run(args: argparse.Namespace) -> dict:
-    manifest = json.loads((args.chunks / "manifest.json").read_text())
-    report = json.loads((args.index / "index-report.json").read_text())
+    manifest = json.loads((args.catalogs / "desiV3-consolidated-manifest.json").read_text())
     chunks = manifest["chunks"]
-    if (report.get("count") != manifest.get("count") or
-            len(report.get("chunks", [])) != len(chunks) or
-            not all(row.get("geometryExact") for row in report["chunks"])):
-        raise ValueError("validated exact TARGETID index required")
+    if manifest.get("encoding") != "desi-consolidated-1" or sum(c["count"] for c in chunks) != manifest["count"]:
+        raise ValueError("invalid V3 manifest")
+    galaxy = read_ids(args.identity / "DR1_GALAXY_targetid.npy.gz", manifest["catalogs"][0]["count"])
+    qso = read_ids(args.identity / "DR1_QSO_targetid.npy.gz", manifest["catalogs"][1]["count"])
+    scales = (manifest["catalogs"][0]["unitsPerMpc"], manifest["catalogs"][1]["unitsPerMpc"])
     if not np.isfinite(args.dimensions).all() or np.any(args.dimensions <= 0):
         raise ValueError("width, height and depth must be positive finite Mly")
     if args.targetid <= 0 or args.targetid >= 2**64:
@@ -166,14 +192,12 @@ def run(args: argparse.Namespace) -> dict:
     center = None
     center_chunk = None
     for number, spec in enumerate(chunks):
-        ids = np.load(args.index / f"targetid_{number:03d}.npy", mmap_mode="r", allow_pickle=False)
-        if len(ids) != spec["count"]:
-            raise ValueError(f"chunk {number}: TARGETID count mismatch")
+        positions, types, rows = read_chunk(args.catalogs / spec["file"], spec["count"], scales)
+        ids = selected_ids(types, rows, galaxy, qso)
         hits = np.flatnonzero(ids == target)
         if hits.size:
             if center is not None or hits.size != 1:
                 raise ValueError("TARGETID is not unique")
-            positions = read_chunk(args.chunks / spec["file"], spec["count"], manifest["unitsPerMpc"])
             center = positions[hits[0]]
             center_chunk = number
     if center is None or np.linalg.norm(center) == 0:
@@ -184,18 +208,18 @@ def run(args: argparse.Namespace) -> dict:
     total = 0
     for number, spec in enumerate(chunks):
         count = spec["count"]
-        positions = read_chunk(args.chunks / spec["file"], count, manifest["unitsPerMpc"])
+        positions, types, rows = read_chunk(args.catalogs / spec["file"], count, scales)
         inside, local_before = select_region(positions, center, frame, args.dimensions)
         if not inside.any():
             continue
-        ids = np.load(args.index / f"targetid_{number:03d}.npy", mmap_mode="r", allow_pickle=False)
+        ids = selected_ids(types[inside], rows[inside], galaxy, qso)
         fog = read_correction(args.corrections / f"fog_{number:03d}.bin", count)[inside]
         rsd = read_correction(args.corrections / f"rsd_{number:03d}.bin", count)[inside]
         displacement = (fog if args.component in ("fog", "both") else 0) + (rsd if args.component in ("rsd", "both") else 0)
         after = corrected_positions(positions[inside], displacement)
         before_parts.append(local_before[inside])
         after_parts.append((after - center) @ frame * MPC_TO_MLY)
-        id_parts.append(np.asarray(ids[inside]))
+        id_parts.append(ids)
         fog_parts.append(fog)
         rsd_parts.append(rsd)
         total += int(inside.sum())
@@ -259,9 +283,9 @@ def main() -> None:
     parser.add_argument("--height-mly", type=float, required=True)
     parser.add_argument("--depth-mly", type=float, required=True)
     parser.add_argument("--component", choices=("rsd", "fog", "both"), default="both")
-    parser.add_argument("--chunks", type=Path, default=Path("ply/chunks"))
-    parser.add_argument("--index", type=Path, default=Path("ply/reconstruction_dr1/private_index"))
-    parser.add_argument("--corrections", type=Path, required=True)
+    parser.add_argument("--catalogs", type=Path, default=Path("desiV3/catalogs"))
+    parser.add_argument("--identity", type=Path, default=Path("review_candidate/identity"))
+    parser.add_argument("--corrections", type=Path, default=Path("review_candidate/payloads"))
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--max-points", type=int, default=10000)
     parser.add_argument("--seed", type=int, default=42)

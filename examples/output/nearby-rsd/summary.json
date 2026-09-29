@@ -2,9 +2,9 @@
   "targetid": "39627625127219783",
   "centerChunk": 0,
   "centerObservedMpc": [
-    -276.9674558244575,
-    -55.12717630352183,
-    -33.82198739394818
+    -277.0317488077887,
+    -55.2589924483621,
+    -33.74482472179979
   ],
   "dimensionsMly": [
     250.0,
@@ -16,7 +16,7 @@
   "objectsInObservedBox": 4124,
   "correctedPositionsStillInBox": 4037,
   "correctedPositionsOutsideBox": 87,
-  "objectsWithNonzeroFoG": 77,
+  "objectsWithNonzeroFoG": 76,
   "objectsWithNonzeroRSD": 4123,
   "objectsWithAppliedDisplacement": 4123,
   "absoluteAppliedDisplacementMpc": {

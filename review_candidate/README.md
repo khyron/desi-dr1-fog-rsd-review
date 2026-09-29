@@ -1,0 +1,7 @@
+# Bundled correction candidate
+
+The `identity/` files contain exact unsigned 64-bit `TARGETID` arrays in the original DR1 galaxy and QSO row order. The V3 catalogue stores each point's class and original row, allowing an exact ID lookup. The `payloads/` files contain 12 FoG and 12 RSD gzip-compressed little-endian float32 radial displacements in physical Mpc. File number and element number correspond exactly to the V3 chunk and element number. The payloads are an exploratory low-redshift BGS-inclusive review candidate; they are **not scientifically validated** and are disabled in the current release configuration.
+
+`manifest.json` records byte size and SHA256 for every bundled identity and correction file. Run `python verify_review_candidate.py` at the repository root to check these, the 12 V3 catalogue checksums, identity lengths and correction lengths. The 12 catalogue chunks contain 15,786,217 objects. Source reconstruction and materialization methods are described in the root README and `reports/`; reproducing the candidate from source requires the external DESI FITS inputs and substantially more compute and RAM.
+
+The verifier establishes file integrity and array shape. It does not establish that the survey mask, displacement field, group association or cosmological assumptions are scientifically correct. Inspect diagnostic plots and independent field/selection tests before considering any correction for release.

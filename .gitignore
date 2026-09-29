@@ -15,6 +15,7 @@ tools/rsd/extensions/
 *.bin
 *.bin.gz
 !desiV3/catalogs/*.bin.gz
+!review_candidate/payloads/*.bin
 *.part
 *.log
 *.csv
