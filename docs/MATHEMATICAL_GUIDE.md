@@ -28,7 +28,7 @@ $$
 \mathbf{s}_{\rm corrected}=\mathbf{s}+\Delta\hat{\mathbf{n}}.
 $$
 
-A positive $\Delta$ moves it farther away; a negative $\Delta$ brings it closer. The displayed examples multiply Mpc by approximately $3.26156$ to label distances in million light-years (Mly). A value quoted in $h^{-1}\,\mathrm{Mpc}$ is converted before geometry calculations: $d_{\rm Mpc}=d_{h^{-1}\mathrm{Mpc}}/h$, where $h$ comes from Planck18.
+A positive $\Delta$ moves it farther away; a negative $\Delta$ brings it closer. The displayed examples multiply Mpc by approximately $3.26156$ to label distances in million light-years (Mly). A value quoted in $h^{-1}\mathrm{Mpc}$ is converted before geometry calculations: $d_{\rm Mpc}=d_{h^{-1}\mathrm{Mpc}}/h$, where $h$ comes from Planck18.
 
 ## 2. FoG: group-based radial compression
 
@@ -43,11 +43,11 @@ $$
 where $z_g$ is the group's redshift. To estimate the group's transverse scale, the code calculates angular separation $\theta_i$ between each spectroscopic member and the group centre, then uses $\chi(z_g)\theta_i$. The angle is in radians. Each distribution gets a robust spread estimate
 
 $$
-R(x)=1.4826\,\mathrm{median}\!\left(\left|x-\mathrm{median}(x)\right|\right),
+R(x)=1.4826\cdot\mathrm{median}\left(\left|x-\mathrm{median}(x)\right|\right),
 \quad
 \sigma_{\parallel}=R(d_{\parallel}),
 \quad
-\sigma_{\perp}=R\!\left(\chi(z_g)\theta\right).
+\sigma_{\perp}=R\left(\chi(z_g)\theta\right).
 $$
 
 The angular separation is calculated from
@@ -62,9 +62,9 @@ The factor $1.4826$ makes the median absolute deviation comparable to a standard
 For an eligible group, the radial scale factor is
 
 $$
-a=\max\!\left(0.08,\min\!\left(1,\frac{\sigma_{\perp}}{\sigma_{\parallel}}\right)\right),
+a=\max\left(0.08,\min\left(1,\frac{\sigma_{\perp}}{\sigma_{\parallel}}\right)\right),
 \qquad
-\Delta_{{\rm FoG},i}=\mathrm{clip}\!\left[(a-1)d_{\parallel,i},-300,+300\right]\ \mathrm{Mpc}.
+\Delta_{{\rm FoG},i}=\mathrm{clip}\left[(a-1)d_{\parallel,i},-300,+300\right]\mathrm{Mpc}.
 $$
 
 The factor $a$ shrinks each radial offset toward the group centre; the $0.08$ floor prevents complete collapse and the $300$ Mpc cap limits an individual move. Those numerical values are **exploratory model choices**, not DESI-approved thresholds. The calculation estimates group *shape*, not an individual galaxy's measured velocity.
@@ -78,9 +78,9 @@ Large-scale redshift-space distortion is associated with coherent motion toward 
 A simplified picture of the field supplied to the reconstruction is the weighted overdensity
 
 $$
-\delta_g(\mathbf{x})\;\sim\;
-\frac{n_{\rm data}(\mathbf{x})-A\,n_{\rm random}(\mathbf{x})}
-{A\,n_{\rm random}(\mathbf{x})},
+\delta_g(\mathbf{x})\sim
+\frac{n_{\rm data}(\mathbf{x})-A\cdot n_{\rm random}(\mathbf{x})}
+{A\cdot n_{\rm random}(\mathbf{x})},
 $$
 
 where $A$ normalizes the total weighted random counts to the data counts. This is **an intuition for the data-minus-randoms step**, not the exact `pyrecon` internal estimator. The actual script calls `pyrecon.IterativeFFTReconstruction`, assigns weighted data and random positions, smooths the density field, and runs three iterations for the recorded candidate. It passes tracer bias $b$, growth rate $f$, a local line of sight (`los=None`), and a mesh cell size to `pyrecon`. The adopted $b$, $f$, smoothing and grid values are listed in [`rsd_config.json`](../tools/rsd/rsd_config.json).
