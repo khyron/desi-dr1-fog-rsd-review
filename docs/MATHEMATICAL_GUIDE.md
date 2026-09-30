@@ -43,7 +43,7 @@ $$
 where $z_g$ is the group's redshift. To estimate the group's transverse scale, the code calculates angular separation $\theta_i$ between each spectroscopic member and the group centre, then uses $\chi(z_g)\theta_i$. The angle is in radians. Each distribution gets a robust spread estimate
 
 $$
-R(x)=1.4826\,\operatorname{median}\!\left(\left|x-\operatorname{median}(x)\right|\right),
+R(x)=1.4826\,\mathrm{median}\!\left(\left|x-\mathrm{median}(x)\right|\right),
 \quad
 \sigma_{\parallel}=R(d_{\parallel}),
 \quad
@@ -64,7 +64,7 @@ For an eligible group, the radial scale factor is
 $$
 a=\max\!\left(0.08,\min\!\left(1,\frac{\sigma_{\perp}}{\sigma_{\parallel}}\right)\right),
 \qquad
-\Delta_{{\rm FoG},i}=\operatorname{clip}\!\left[(a-1)d_{\parallel,i},-300,+300\right]\ \mathrm{Mpc}.
+\Delta_{{\rm FoG},i}=\mathrm{clip}\!\left[(a-1)d_{\parallel,i},-300,+300\right]\ \mathrm{Mpc}.
 $$
 
 The factor $a$ shrinks each radial offset toward the group centre; the $0.08$ floor prevents complete collapse and the $300$ Mpc cap limits an individual move. Those numerical values are **exploratory model choices**, not DESI-approved thresholds. The calculation estimates group *shape*, not an individual galaxy's measured velocity.
