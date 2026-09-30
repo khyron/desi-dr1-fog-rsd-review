@@ -6,7 +6,7 @@ All commands below run from this repository's root. This is a Python data pipeli
 
 ## Quick path: use the included current files
 
-The actual twelve current binaries are already in [`desiV3/catalogs/`](catalogs/), with their [matching manifest](catalogs/desiV3-consolidated-manifest.json). They are regular Git files, so an authenticated clone of this private repository obtains them without downloading the upstream FITS catalogues or repeating SQL queries. From the repository root, verify the copied files:
+The actual twelve current binaries are already in [`desiV3/catalogs/`](catalogs/), with their [matching manifest](catalogs/desiV3-consolidated-manifest.json). They are regular Git files, so a standard clone of this repository obtains them without downloading the upstream FITS catalogues or repeating SQL queries. From the repository root, verify the copied files:
 
 ```bash
 # Linux

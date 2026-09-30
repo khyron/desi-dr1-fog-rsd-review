@@ -1,6 +1,6 @@
 # Local correction-preview examples
 
-These four examples use the bundled V3 catalogue, exact TARGETID identity arrays and **unvalidated** correction payloads in this private repository. The SVGs are visual diagnostics of stored deltas, not evidence that the RSD/FoG reconstruction is scientifically correct. They open directly in a browser and do not use the viewer. Run commands from the repository root after `python -m pip install numpy` and `python verify_review_candidate.py`. No external data download is needed. Replace `--corrections` only after verifying another candidate has identical row ordering.
+These four examples use the bundled V3 catalogue, exact TARGETID identity arrays and **unvalidated** correction payloads in this repository. The SVGs are visual diagnostics of stored deltas, not evidence that the RSD/FoG reconstruction is scientifically correct. They open directly in a browser and do not use the viewer. Run commands from the repository root after `python -m pip install numpy` and `python verify_review_candidate.py`. No external data download is needed. Replace `--corrections` only after verifying another candidate has identical row ordering.
 
 | Example | TARGETID | Box (Mly) | Applied component | Observed-box objects | Nonzero applied shifts |
 |---|---:|---:|---|---:|---:|

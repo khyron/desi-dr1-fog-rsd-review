@@ -6,7 +6,7 @@ The visualization selection contains 15,786,217 DR1 objects (14,140,375 `GALAXY`
 
 ## Start here: inspect the bundled correction
 
-The private repository contains all inputs needed to compare the stored FoG/RSD candidate with the **observed** positions of 15,786,217 objects. Clone it, install NumPy, run `python verify_review_candidate.py`, then run the region command below. The resulting comparison and histogram are SVG images, which display in browsers and Markdown like PNGs while remaining scalable. Change TARGETID, box width/height/depth in Mly, or `--component rsd|fog|both` to test another area. The catalogues need not be regenerated for this review.
+The repository contains all inputs needed to compare the stored FoG/RSD candidate with the **observed** positions of 15,786,217 objects. Clone it, install NumPy, run `python verify_review_candidate.py`, then run the region command below. The resulting comparison and histogram are SVG images, which display in browsers and Markdown like PNGs while remaining scalable. Change TARGETID, box width/height/depth in Mly, or `--component rsd|fog|both` to test another area. The catalogues need not be regenerated for this review.
 
 To **recompute** the corrections from original DESI data, use the FoG and RSD sections below in order: download source catalogues, build the exact identity/geometry, generate FoG group deltas, reconstruct RSD fields with appropriate data and random catalogues, materialize per-row payloads, then rerun the verifier and visual comparisons. Recomputing needs the external FITS files and a suitable scientific computing environment. The bundled output is the historical exploratory candidate, not an approved correction.
 
@@ -31,7 +31,7 @@ Raw FITS, reconstructed meshes and NumPy caches are excluded. The **current revi
 
 ## Visual comparison around one TARGETID
 
-This Python script runs locally and does **not** require the viewer or an online service. A normal authenticated clone of this private repository includes the observed V3 positions, exact TARGETIDs, and the exploratory correction candidate. On macOS/Linux, create an environment and run from the repository root:
+This Python script runs locally and does **not** require the viewer or an online service. A standard clone of this repository includes the observed V3 positions, exact TARGETIDs, and the exploratory correction candidate. On macOS/Linux, create an environment and run from the repository root:
 
 ```bash
 python3 -m venv .venv
@@ -53,7 +53,7 @@ See [four reproducible examples](examples/README.md), including the generated pl
 
 ## Rebuild the current visualization catalogue
 
-The twelve active `desiV3_catalog_***.bin.gz` files are [included directly in this private repository](desiV3/catalogs/), together with their [SHA256 checksums](desiV3/catalogs/SHA256SUMS) and a [matching manifest](desiV3/catalogs/desiV3-consolidated-manifest.json). A normal authenticated Git clone obtains the data without running the source downloads or SQL imaging recovery. On Linux, verify with `sha256sum -c desiV3/catalogs/SHA256SUMS`; on macOS use `shasum -a 256 -c desiV3/catalogs/SHA256SUMS` from the repository root.
+The twelve active `desiV3_catalog_***.bin.gz` files are [included directly in this repository](desiV3/catalogs/), together with their [SHA256 checksums](desiV3/catalogs/SHA256SUMS) and a [matching manifest](desiV3/catalogs/desiV3-consolidated-manifest.json). A normal authenticated Git clone obtains the data without running the source downloads or SQL imaging recovery. On Linux, verify with `sha256sum -c desiV3/catalogs/SHA256SUMS`; on macOS use `shasum -a 256 -c desiV3/catalogs/SHA256SUMS` from the repository root.
 
 To regenerate them independently, follow the [complete macOS and Linux reproduction guide](desiV3/REPRODUCE_CURRENT_CATALOG.md) for source downloads, exact DR1 row selection and partitioning, imaging recovery, file-format validation, deployment-ready names and rollback/reference hashes. These catalogue files contain observed positions; the exploratory FoG/RSD correction payloads are separate.
 
