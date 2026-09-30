@@ -8,6 +8,8 @@ The visualization selection contains 15,786,217 DR1 objects (14,140,375 `GALAXY`
 
 The repository contains all inputs needed to compare the stored FoG/RSD candidate with the **observed** positions of 15,786,217 objects. Clone it, install NumPy, run `python verify_review_candidate.py`, then run the region command below. The resulting comparison and histogram are SVG images, which display in browsers and Markdown like PNGs while remaining scalable. Change TARGETID, box width/height/depth in Mly, or `--component rsd|fog|both` to test another area. The catalogues need not be regenerated for this review.
 
+For the mathematical definitions, exact sign and unit conventions, field parameters, group compression rule, catalogue assignment logic and scientific limitations, read the [mathematical methodology](docs/MATHEMATICAL_GUIDE.md). It is intended to support an astronomer's independent review of how this candidate was constructed.
+
 To **recompute** the corrections from original DESI data, use the FoG and RSD sections below in order: download source catalogues, build the exact identity/geometry, generate FoG group deltas, reconstruct RSD fields with appropriate data and random catalogues, materialize per-row payloads, then rerun the verifier and visual comparisons. Recomputing needs the external FITS files and a suitable scientific computing environment. The bundled output is the historical exploratory candidate, not an approved correction.
 
 ## Repository contents
@@ -20,6 +22,7 @@ To **recompute** the corrections from original DESI data, use the FoG and RSD se
 | `tools/rsd/` | Reconstruction, DR1 identity index, extension/low-z candidates, audits and DR1 materialization |
 | `build_dr1_full_catalog.py`, `compact_dr1_catalogs.py`, `build_desi_chunks.py` | Rebuild the historical source geometry and chunk ordering when auditing the exact point index |
 | `reports/` | Methodology, coverage and low-z/mask review notes from the original analysis |
+| `docs/MATHEMATICAL_GUIDE.md` | Equations, assumptions, field parameters, exact-ID assignment and scientific review criteria |
 | `visualize_target_region.py` | Standalone V3-catalogue comparison of a TARGETID-centered observed volume and its FoG/RSD-corrected positions |
 | `desiV3/` | Twelve ready-to-use consolidated catalogue assets, their checksums, and the complete Python rebuild pipeline |
 | `review_candidate/` | Exact original-row TARGETID arrays and the 24 FoG/RSD payloads corresponding to the bundled V3 catalogue; exploratory, scientifically unvalidated |
